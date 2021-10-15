@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* header*/
+#judul{
+    font-size: 30px;
+}
+
+header{
+    background-color: goldenrod;
+    height: auto;
+    display: flex;
+    
+}
+
+/* nav bar*/
+nav{
+    margin:auto;
+    text-align: center;
+    width: 100%;
+}
+#menu{
+    list-style: none;
+    position: relative;
+    display: inline-table;
+    width: 100%;
+    background-color: green;
+    padding: 10px;
+    border: 1px solid black;
+}
+.titik{
+    float: left;
+    padding: 10px;
+    width: 30%;
+ 
+ }
+.isi{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+}
+
+.titik:hover{
+    background-color: greenyellow;
+}
+/* content*/
+.container{
+    display: flex;
+    height: auto;
+    width: auto;
+}
+/*main content*/
+#containerkanan{
+    background-color: rgb(235, 199, 108);
+    height: auto;
+    width: 50%;
+    padding: 20px;
+}
+td{
+    padding-left: 10px;
+}
+/* content berita*/
+#containerkiri{
+    background-color: rgb(211, 174, 81);
+    height: auto;
+    width: 50%;
+    padding: 20px;   
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+li:hover{
+    background-color: blanchedalmond;
+}
+
+/*footer*/
+footer{
+    background-color: goldenrod;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
