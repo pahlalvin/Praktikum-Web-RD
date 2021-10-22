@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum Minggu 3 alvin-pasmah-118130024</title>
+</head>
+
+<body id="modetema">
+    <label for="tema">Pilih mode tema pada website </label>
+    <select class="selectColor" id="warna" onchange ="ubahwarna()">
+        <option value="normal">Default</option>
+        <option value="Kuning">Mode Baca</option>
+        <option value="black">Mode Gelap</option>
+    </select>
+
+    <div class="tema">
+        <script>
+            function ubahwarna(){
+                var color = document.getElementById("warna");
+                if (warna.value=="Kuning"){
+                    document.body.style.backgroundColor = "orange";
+                    document.getElementById("modetema").style.color = "yellow";
+                }else if (warna.value=="black"){
+                    document.body.style.backgroundColor = "black";
+                    document.getElementById("modetema").style.color = "white";
+                }
+                else{
+                    document.body.style.backgroundColor = "white";
+                    document.getElementById("modetema").style.color = "black";
+                }
+            }
+        </script>
+    </div>
+     
+    <div id=pilihandaerah">
+    <h1>Perkenalkan diri Anda</h1>
+    <label for="daerah">Pilih asal daerah kamu</label>
+        <select name="daerah" id="daerah" onchange="asaldaerah()">
+            <option value="a">select</option>
+            <option value="Banten">Banten</option>
+            <option value="Jakarta">Jakarta</option>
+            <option value="Surabaya">Surabaya</option>
+            <option value="Medan">Medan</option>
+        </select>
+        <p id="asaldaerah"</p>
+    </div>
+    <div class="listdaerah">
+        <script>
+        function asaldaerah(){
+            var asaldaerah=document.getElementById("daerah");
+            if(asaldaerah.value=="Banten"){
+                var daerah=document.getElementById("asaldaerah");
+                daerah.innerText = "Banten merupakan provinsi Indonesia dimana provinsi paling barat di Pulau Jawa.";
+                
+            }else if(asaldaerah.value=="Jakarta"){
+                var daerah=document.getElementById("asaldaerah");
+                daerah.innerText = "Jakarta merupakan provinsi Indonesia dan juga ibu kota Indonesia";
+                
+            }else if(asaldaerah.value=="Surabaya"){
+                var daerah=document.getElementById("asaldaerah");
+                daerah.innerText = " ibu kota Provinsi Jawa Timur, Indonesia, sekaligus kota metropolitan terbesar di provinsi tersebut";
+                
+            }else if(asaldaerah.value=="Medan"){
+                var daerah=document.getElementById("asaldaerah");
+                daerah.innerText = "kota multietnis yang penduduknya terdiri dari orang-orang dengan latar belakang budaya dan agama yang berbeda-beda";
+                
+            }else if(asaldaerah.value=="a"){
+                var daerah=document.getElementById("asaldaerah");
+                daerah.innerText = " ";
+            }
+        }    
+        </script>
+    </div>
+
+    <div id="inputanangka">
+        <label for="faktorial">masukan umur untuk menghitung Faktorial </label>
+        <form>
+            <input type="text" name="" id="masukan">
+            <button id="tombol">calculate</button>
+            <div id="keluaran"></div>
+        </form>
+
+        <script>
+        var masukan = document.getElementById("masukan")
+        var tombol = document.getElementById("tombol")
+        var keluaran = document.getElementById("keluaran")
+
+        tombol.addEventListener("click", function(num){
+            num.preventDefault(); 
+            var angkamasukan= masukan.value;
+            var faktorial = 1;
+            for(var i=angkamasukan; i>0; i--){
+                faktorial *= i;
+            }
+            keluaran.innerHTML = `Hasil Faktorial dari umur anda adalah: ${faktorial}`;
+        })
+        </script>
+    </div>
+
+</body>
+</html>
